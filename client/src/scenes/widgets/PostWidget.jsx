@@ -35,7 +35,7 @@ const PostWidget = ({
     const main = palette.neutral.main
     const primary = palette.primary.main
 
-    const pathLike = async () => {
+    const patchLike = async () => {
         const response =await fetch(`http://localhost:3001/possts/${postId}/like`, {
             method: "PATCH",
             headers: {
@@ -71,7 +71,7 @@ const PostWidget = ({
             <FlexBetween mt="0.25rem">
                 <FlexBetween gap="1rem">
                     <FlexBetween gap="0.3rem">
-                        <IconButton onClick={pathLike}>
+                        <IconButton onClick={patchLike}>
                             {isLiked ? (
                                 <FavoriteOutlined sx={{color:primary}}/>
                             ) : (
