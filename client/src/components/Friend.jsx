@@ -3,7 +3,7 @@ import { Box, IconButton, Typography, useTheme } from "@mui/material"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router"
 import { setFriends } from "../state"
-import flexBetween from "./FlexBetween"
+import FlexBetween from "./FlexBetween"
 import UserImage from "./UserImage"
 
 const Friend = ({ friendId, name , subtitle, userPicturePath}) => {
@@ -37,8 +37,8 @@ const Friend = ({ friendId, name , subtitle, userPicturePath}) => {
     }
     
     return (
-        <flexBetween>
-            <flexBetween gap="1rem">
+        <FlexBetween>
+            <FlexBetween gap="1rem">
                 <UserImage image={userPicturePath} size="55px" />
                 <Box
                 onClick={()=>{
@@ -63,7 +63,7 @@ const Friend = ({ friendId, name , subtitle, userPicturePath}) => {
                         {subtitle}
                     </Typography>
                 </Box>
-            </flexBetween>
+            </FlexBetween>
             <IconButton
             onClick={() => patchFriend()}
             sx={{ backgroundColor: primaryLight, p:"0.6rem"}}
@@ -75,7 +75,7 @@ const Friend = ({ friendId, name , subtitle, userPicturePath}) => {
                 )
                 }
             </IconButton>
-        </flexBetween>
+        </FlexBetween>
     )
 }
 

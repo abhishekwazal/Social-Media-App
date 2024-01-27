@@ -4,11 +4,11 @@ import Form from "./Form"
 const LoginPage = ()=>{
     const theme=useTheme()
     const isNonMobileScreens =useMediaQuery("(min-width:100px)")
-    return <Box>
+    return (<Box>
         <Box width="100%" backgroundColor={theme.palette.background.alt} p="1rem 6%" textAlign="center">
         <Typography
                 fonstweight="bold"
-                fontSize="clamp(1rem,2rem,2.25rem)"
+                fontSize="32px"
                 color="primary"
                 >
                 Sociopedia
@@ -26,6 +26,7 @@ const LoginPage = ()=>{
             <Form/>
         </Box>
     </Box>
+    )
 }
 
 export default LoginPage

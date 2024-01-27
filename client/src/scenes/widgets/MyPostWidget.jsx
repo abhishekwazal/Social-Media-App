@@ -39,7 +39,7 @@ const MyPostWidget = ({ picturePath}) => {
 
 const handlePost = async() => {
     const formData = new FormData()
-    formData.append("useId",_id)
+    formData.append("userId",_id)
     formData.append("description",post)
     if(image){
         formData.append("picture",image)
@@ -48,8 +48,9 @@ const handlePost = async() => {
     const response = await fetch(`http://localhost:3001/posts`,{
         method:"POST",
         headers: {Authorization : `Bearer ${token}`},
-        body: formData
+        body: formData,
     })
+    console.log(response);
     const posts = await response.json()
     dispatch(setPosts({posts}))
     setImage(null)
@@ -63,6 +64,7 @@ const handlePost = async() => {
                 <InputBase 
                 placeholder="What's on your mind..."
                 onChange={(e)=>setPost(e.target.value)}
+                value={post}
                 sx={{
                     width:"100%",
                     backgroundColor: palette.neutral.light,
@@ -81,7 +83,7 @@ const handlePost = async() => {
                     <Dropzone
                     acceptedFiles=".jpg,.jpeg,.png"
                     multiple={false}
-                    onDrop={(acceptedFiles) =>setImage("picture", acceptedFiles[0])}
+                    onDrop={(acceptedFiles) =>setImage(acceptedFiles[0])}
                   >
                     {({ getRootProps, getInputProps }) => (
                         <FlexBetween>
@@ -135,12 +137,12 @@ const handlePost = async() => {
                     </FlexBetween>
 
                     <FlexBetween gap="0.25rem">
-                        <GifBoxOutlined sx={{color:mediumMain}}/>
+                        <AttachFileOutlined sx={{color:mediumMain}}/>
                         <Typography color={mediumMain}>Attachment</Typography>
                     </FlexBetween>
                     
                     <FlexBetween gap="0.25rem">
-                        <GifBoxOutlined sx={{color:mediumMain}}/>
+                        <MicOutlined sx={{color:mediumMain}}/>
                         <Typography color={mediumMain}>Audio</Typography>
                     </FlexBetween>
                     </>

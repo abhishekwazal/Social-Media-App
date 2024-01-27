@@ -10,6 +10,7 @@ import FriendListWidget from "../widgets/FriendListWidget"
 const HomePage = ()=>{
     const isNonMobileScreens = useMediaQuery("(min-width:100px)")
     const {_id,picturePath} = useSelector((state)=>state.user)
+    
     return (
         <Box>
             <Navbar/>
