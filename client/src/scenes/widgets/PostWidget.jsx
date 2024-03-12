@@ -71,21 +71,21 @@ const PostWidget = ({
             <FlexBetween mt="0.25rem">
                 <FlexBetween gap="1rem">
                     <FlexBetween gap="0.3rem">
-                        <IconButton onClick={patchLike}>
+                        {/* <IconButton onClick={patchLike}>
                             {isLiked ? (
                                 <FavoriteOutlined sx={{color:primary}}/>
                             ) : (
                                 <FavoriteBorderOutlined/>
                             )}
                         </IconButton>
-                        <Typography>{likeCount}</Typography>
+                        <Typography>{likeCount}</Typography> */}
                     </FlexBetween>
 
                     <FlexBetween gap="0.3rem">
-                        <IconButton onClick={()=>setIsComment(!isComment)}>
+                        {/* <IconButton onClick={()=>setIsComment(!isComment)}>
                             <ChatBubbleOutlineOutlined/>
                         </IconButton>
-                        <Typography>{comments ? comments.length : 0}</Typography>
+                        <Typography>{comments ? comments.length : 0}</Typography> */}
                     </FlexBetween>
                 </FlexBetween>
                 <IconButton>

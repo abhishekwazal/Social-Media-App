@@ -49,6 +49,7 @@ const UserWidget = ({ userId, picturePath }) => {
       friends,
     } = user;
   
+  
     return (
       <WidgetWrapper>
         {/* FIRST ROW */}
@@ -76,7 +77,7 @@ const UserWidget = ({ userId, picturePath }) => {
               <Typography color={medium}>{friends.length} friends</Typography>
             </Box>
           </FlexBetween>
-          <ManageAccountsOutlined />
+          <ManageAccountsOutlined/>
         </FlexBetween>
   
         <Divider />
@@ -123,7 +124,7 @@ const UserWidget = ({ userId, picturePath }) => {
             <FlexBetween gap="1rem">
               <img src="../assets/twitter.png" alt="twitter" />
               <Box>
-                <Typography color={main} fontWeight="500">
+                <Typography color={main} fontWeight="500" sx={{"&:hover" :{cursor:"pointer",color:medium}}}>
                   Twitter
                 </Typography>
                 <Typography color={medium}>Social Network</Typography>
@@ -136,7 +137,7 @@ const UserWidget = ({ userId, picturePath }) => {
             <FlexBetween gap="1rem">
               <img src="../assets/linkedin.png" alt="linkedin" />
               <Box>
-                <Typography color={main} fontWeight="500">
+                <Typography color={main} fontWeight="500" sx={{"&:hover" :{cursor:"pointer",color:medium}}}>
                   Linkedin
                 </Typography>
                 <Typography color={medium}>Network Platform</Typography>

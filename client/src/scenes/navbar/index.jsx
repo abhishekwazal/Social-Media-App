@@ -47,6 +47,7 @@ const Navbar = () => {
                 fonstweight="bold"
                 fontSize="clamp(1rem,2rem,2.25rem)"
                 color="primary"
+                padding={2}
                 onClick={() => navigate("/home")}
                 sx={{
                     "&:hover": {
@@ -54,7 +55,7 @@ const Navbar = () => {
                         cursor: "pointer"
                     },
                 }}>
-                Sociopedia
+                Xplore
             </Typography>
             {isNonMobileScreens && (
                 <FlexBetween

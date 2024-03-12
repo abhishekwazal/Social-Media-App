@@ -133,17 +133,17 @@ const handlePost = async() => {
                     <>
                     <FlexBetween gap="0.25rem">
                         <GifBoxOutlined sx={{color:mediumMain}}/>
-                        <Typography color={mediumMain}>Clip</Typography>
+                        <Typography color={mediumMain} sx={{"&:hover" :{cursor:"pointer",color:medium}}}>Clip</Typography>
                     </FlexBetween>
 
                     <FlexBetween gap="0.25rem">
                         <AttachFileOutlined sx={{color:mediumMain}}/>
-                        <Typography color={mediumMain}>Attachment</Typography>
+                        <Typography color={mediumMain} sx={{"&:hover" :{cursor:"pointer",color:medium}}}>Attachment</Typography>
                     </FlexBetween>
                     
                     <FlexBetween gap="0.25rem">
                         <MicOutlined sx={{color:mediumMain}}/>
-                        <Typography color={mediumMain}>Audio</Typography>
+                        <Typography color={mediumMain} sx={{"&:hover" :{cursor:"pointer",color:medium}}}>Audio</Typography>
                     </FlexBetween>
                     </>
                 ) : <FlexBetween gap="0.25rem">
@@ -156,7 +156,7 @@ const handlePost = async() => {
                     sx={{
                         color: palette.background.alt,
                         backgroundColor: palette.primary.main,
-                        borderRadius:"3rem"
+                        borderRadius:"50rem"
                     }}
                     >
                         POST

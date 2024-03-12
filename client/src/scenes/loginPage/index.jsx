@@ -11,7 +11,7 @@ const LoginPage = ()=>{
                 fontSize="32px"
                 color="primary"
                 >
-                Sociopedia
+                Xplore
             </Typography>
         </Box>
         <Box width={isNonMobileScreens ? "50%" : "93%"}
@@ -21,7 +21,7 @@ const LoginPage = ()=>{
         backgroundColor={theme.palette.background.alt}
         >
             <Typography fontWeight="500" variant="h5" sx={{mb:"1.5rem"}}>
-                welcome to Sociopedia, social media for sociopaths
+                welcome to Xplore, social media for sociopaths
             </Typography>
             <Form/>
         </Box>
