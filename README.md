@@ -1,3 +1,4 @@
+
 # Social Media App
 
 ## What it Does
@@ -11,7 +12,7 @@ Users can Switch between light and dark mode as per convenience
 
 **Client:** 
 
-React, React-Router,Formik and yup,Redux Toolkit, Redux, React-Dropzone.
+React, React-Router, Formik and yup, Redux Toolkit, Redux, React-Dropzone.
 
 **Server:**
 
